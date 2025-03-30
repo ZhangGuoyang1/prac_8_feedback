@@ -1,0 +1,18 @@
+<SquaringWidget>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    TextInput:
+        id: input_number
+        multiline: False
+        hint_text: "Enter a number"
+
+    Button:
+        text: "Square It"
+        # Pass the text directly to the event handler without type conversion here
+        on_press: app.handle_calculate(input_number.text)
+
+    Label:
+        id: result_label
+        text: ""
